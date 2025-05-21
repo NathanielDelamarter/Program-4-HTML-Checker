@@ -17,4 +17,13 @@ public class HTMLManager {
      return tags;
   }
   
+  public String toString() {
+     String result = "";
+     while(!tags.isEmpty()) {
+        HTMLTag tag = tags.remove();
+        result += tag.toString() + " ";   
+     }
+     return result;
+  }
+  
 }
