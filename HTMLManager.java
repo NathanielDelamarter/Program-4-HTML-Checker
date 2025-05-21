@@ -7,6 +7,7 @@ public class HTMLManager {
      if(html == null) {
         throw new IllegalArgumentException("The html is null");
      }
+     tags = new LinkedList<>();
      while(!html.isEmpty()) {
         tags.add(html.remove());
      }
