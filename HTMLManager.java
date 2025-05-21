@@ -4,12 +4,12 @@ public class HTMLManager {
   private Queue<HTMLTag> tags;
   
   public HTMLManager(Queue<HTMLTag> html) {
-     if(html == null) {
+     if(html == null) { //check if the queue is null
         throw new IllegalArgumentException("The html is null");
      }
      tags = new LinkedList<>();
      while(!html.isEmpty()) {
-        tags.add(html.remove());
+        tags.add(html.remove()); //add all the tags from the html to private queue "tags"
      }
   }
   
@@ -19,7 +19,7 @@ public class HTMLManager {
   
   public String toString() {
      String result = "";
-     for(HTMLTag tag : tags) {
+     for(HTMLTag tag : tags) { //take each elemnts from the queue "tags" without discarding it and add it to the string separetly
         result += tag.toString().trim() + " ";   
      }
      return result;
